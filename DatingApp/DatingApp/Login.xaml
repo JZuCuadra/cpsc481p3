@@ -14,7 +14,19 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}">
-    <Canvas>
-
+    <Canvas x:Name="loginBtn">
+        <materialDesign:Card Padding="32" Canvas.Left="80" Canvas.Top="80" Height="320" Width="320"/>
+        <Button Style="{StaticResource MaterialDesignRaisedButton}" Canvas.Left="80" Canvas.Top="480" Height="65" Width="320">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">LOGIN</TextBlock>
+        </Button>
+        <Button Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="291" Canvas.Top="550">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">SIGN UP</TextBlock>
+        </Button>
+        <Button Style="{StaticResource MaterialDesignRaisedButton}" Canvas.Left="80" Canvas.Top="640" Height="65" Width="320">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">FACEBOOK</TextBlock>
+        </Button>
+        <Button Style="{StaticResource MaterialDesignRaisedButton}" Canvas.Left="80" Canvas.Top="725" Height="65" Width="320">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">GOOGLE+</TextBlock>
+        </Button>
     </Canvas>
 </Window>
