@@ -6,21 +6,90 @@
         xmlns:local="clr-namespace:DatingApp"
         mc:Ignorable="d"
         Title="Personality Test" Height="890" Width="500">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="190*"/>
+                                <ColumnDefinition Width="27*"/>
+                                <ColumnDefinition Width="45*"/>
+                            </Grid.ColumnDefinitions>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFA081D6"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Fill="#FF673AB7" RadiusY="8.5" RadiusX="8.5" Stroke="#FF673AB7" Cursor="Hand" Grid.ColumnSpan="3"/>
+                            <TextBlock x:Name="textBlock" Margin="0,16.333,40,15.667" TextWrapping="Wrap" Foreground="#FFFFFDFD" FontFamily="Roboto" FontSize="20" HorizontalAlignment="Right" Width="34" Text="YES"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFA081D6"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Fill="#FF673AB7" RadiusY="8.5" RadiusX="8.5" Stroke="#FF673AB7"/>
+                            <TextBlock x:Name="textBlock" Margin="116,20,112,14" TextWrapping="Wrap" Text="NO" FontFamily="Roboto" FontSize="20" Foreground="#FFF7F5F5"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Canvas x:Name="TestCanvas">
         <Grid Height="859" Width="492">
             <Rectangle Fill="#FF673AB7" Height="57" Margin="12,35,10,0" Stroke="Black" VerticalAlignment="Top"/>
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,51.4,0,0" Width="136.643" FontFamily="Roboto" Foreground="#FFF3F2F2" FontSize="20"><Run Text="QUESTION"/><Run Text=" 1"/></TextBlock>
             <Rectangle Fill="#FF00BCD4" Margin="10,122.538,12,225.96" Stroke="Black" RadiusY="44.791" RadiusX="44.791"/>
-            <Button x:Name="YesButton" Style="{StaticResource MaterialDesignRaisedButton}" Height="Auto" Margin="119.26,400.644,115.619,393.356" Background="#FF673AB7">
-                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="YES" FontFamily="Roboto" FontSize="20" Foreground="#FFF7F6F6"/>
-            </Button>
-            <Button x:Name="NoButton" Style="{StaticResource MaterialDesignRaisedButton}" Height="65" Margin="119.26,0,115.619,298.865" VerticalAlignment="Bottom" Background="#FF673AB7">
-                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="NO" Foreground="#FFF7F6F6" FontFamily="Roboto" FontSize="20"/>
-            </Button>
-            <Button x:Name="NextButton" Style="{StaticResource MaterialDesignRaisedButton}" Height="65" Margin="0,0,43.369,103.162" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="126.877" Background="#FF673AB7">
+            <Button x:Name="NextButton" Style="{StaticResource MaterialDesignRaisedButton}" Height="65" Margin="0,0,21.369,129.162" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="126.877" Background="#FF673AB7">
                 <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="NEXT" FontFamily="Roboto" FontSize="20" Foreground="#FFF7F6F6"/>
             </Button>
-            <TextBlock x:Name="textBlock" Height="91.936" Margin="102.76,221.996,39.369,0" TextWrapping="Wrap" Text="Do you like the taste of beer?" VerticalAlignment="Top" FontFamily="Roboto" FontSize="40" Foreground="White"/>
+            <TextBlock x:Name="questionText" Height="91.936" Margin="102.76,221.996,39.369,0" TextWrapping="Wrap" Text="Do you like the taste of beer?" VerticalAlignment="Top" FontFamily="Roboto" FontSize="40" Foreground="White"/>
+            <Button x:Name="YesButton" Content="Button" Margin="118,417.667,112,377.333" Style="{DynamicResource ButtonStyle1}"/>
+            <Button x:Name="NoButton" Content="Button" Margin="117.5,0,111.5,301.5" Style="{DynamicResource ButtonStyle2}" Height="63" VerticalAlignment="Bottom"/>
 
         </Grid>
     </Canvas>

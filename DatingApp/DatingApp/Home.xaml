@@ -348,6 +348,7 @@
             <Button x:Name="SettingsButton" Content="Button" Height="81" Style="{DynamicResource ButtonStyle8}" Width="89.5" Canvas.Top="94.5"/>
 
         </Canvas>
+        <Rectangle Fill="#FF00BCD4" Margin="39,233,38,243" RadiusY="44.791" RadiusX="44.791" Stroke="Black"/>
 
     </Grid>
 </Window>

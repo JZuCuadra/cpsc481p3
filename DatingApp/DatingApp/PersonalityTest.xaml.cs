@@ -28,6 +28,7 @@ namespace DatingApp
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
             this.TestCanvas.Visibility = Visibility.Hidden;
+            // add functionality here
         }
     }
 }

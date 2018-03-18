@@ -22,6 +22,30 @@ namespace DatingApp
         public Home()
         {
             InitializeComponent();
+            this.MatchesButton.Click += MatchesButton_Click;
+            this.CompassButton.Click += CompassButton_Click;
+            this.ChatButton.Click += ChatButton_Click;
+            this.ProfileButton.Click += ProfileButton_Click;
+        }
+
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ChatButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CompassButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MatchesButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
