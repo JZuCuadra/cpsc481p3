@@ -20,3 +20,5 @@ We are doing a triad color pallate, it would be very handy to have some sort of 
     success: "#4caf50"      //GREEN
 }
 ```
+### SIZES
+All windows should be 890x500 (16x9)
