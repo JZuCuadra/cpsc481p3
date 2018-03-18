@@ -23,6 +23,14 @@ namespace DatingApp
         {
             InitializeComponent();
             this.NextButton.Click += NextButton_Click;
+
+            PreferencesComboBox.Items.Add("Homosexual");
+            PreferencesComboBox.Items.Add("Heterosexual");
+            PreferencesComboBox.Items.Add("Bisexual");
+
+            RelationComboBox.Items.Add("Commited Relationship");
+            RelationComboBox.Items.Add("Uncommited Relationship");
+            RelationComboBox.Items.Add("Frienship");
         }
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
