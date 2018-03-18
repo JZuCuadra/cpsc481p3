@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="Personality Test" Height="890" Width="500">
     <Grid>
-        
+        <Rectangle Fill="#FF673AB7" Height="57" Margin="12,35,10,0" Stroke="Black" VerticalAlignment="Top"/>
+        <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,51.4,0,0" Text="QUESTION" Width="136.643" FontFamily="Roboto" Foreground="#FFF3F2F2"/>
+        <Rectangle Fill="#FF673AB7" Height="228" Margin="12,113,10,0" Stroke="Black" VerticalAlignment="Top"/>
+        <Button Style="{StaticResource MaterialDesignRaisedButton}" Height="65" Margin="32,357,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="192">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="YES"/>
+        </Button>
+        <Button Style="{StaticResource MaterialDesignRaisedButton}" Height="65" Margin="0,357,32,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="192">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="NO"/>
+        </Button>
+
     </Grid>
 </Window>
