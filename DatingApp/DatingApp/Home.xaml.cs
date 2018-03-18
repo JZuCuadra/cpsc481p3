@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace DatingApp
 {
     /// <summary>
-    /// Interaction logic for PersonalityTest.xaml
+    /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class PersonalityTest : Window
+    public partial class Home : Window
     {
-        public PersonalityTest()
+        public Home()
         {
             InitializeComponent();
-            this.NextButton.Click += NextButton_Click;
-        }
-
-        private void NextButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.TestCanvas.Visibility = Visibility.Hidden;
         }
     }
 }

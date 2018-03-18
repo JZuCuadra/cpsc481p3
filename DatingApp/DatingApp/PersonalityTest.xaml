@@ -6,16 +6,22 @@
         xmlns:local="clr-namespace:DatingApp"
         mc:Ignorable="d"
         Title="Personality Test" Height="890" Width="500">
-    <Grid>
-        <Rectangle Fill="#FF673AB7" Height="57" Margin="12,35,10,0" Stroke="Black" VerticalAlignment="Top"/>
-        <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,51.4,0,0" Text="QUESTION" Width="136.643" FontFamily="Roboto" Foreground="#FFF3F2F2"/>
-        <Rectangle Fill="#FF673AB7" Height="228" Margin="12,113,10,0" Stroke="Black" VerticalAlignment="Top"/>
-        <Button Style="{StaticResource MaterialDesignRaisedButton}" Height="65" Margin="32,357,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="192">
-            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="YES"/>
-        </Button>
-        <Button Style="{StaticResource MaterialDesignRaisedButton}" Height="65" Margin="0,357,32,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="192">
-            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="NO"/>
-        </Button>
+    <Canvas x:Name="TestCanvas">
+        <Grid Height="859" Width="492">
+            <Rectangle Fill="#FF673AB7" Height="57" Margin="12,35,10,0" Stroke="Black" VerticalAlignment="Top"/>
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,51.4,0,0" Width="136.643" FontFamily="Roboto" Foreground="#FFF3F2F2" FontSize="20"><Run Text="QUESTION"/><Run Text=" 1"/></TextBlock>
+            <Rectangle Fill="#FF00BCD4" Margin="10,122.538,12,225.96" Stroke="Black" RadiusY="44.791" RadiusX="44.791"/>
+            <Button x:Name="YesButton" Style="{StaticResource MaterialDesignRaisedButton}" Height="Auto" Margin="119.26,400.644,115.619,393.356" Background="#FF673AB7">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="YES" FontFamily="Roboto" FontSize="20" Foreground="#FFF7F6F6"/>
+            </Button>
+            <Button x:Name="NoButton" Style="{StaticResource MaterialDesignRaisedButton}" Height="65" Margin="119.26,0,115.619,298.865" VerticalAlignment="Bottom" Background="#FF673AB7">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="NO" Foreground="#FFF7F6F6" FontFamily="Roboto" FontSize="20"/>
+            </Button>
+            <Button x:Name="NextButton" Style="{StaticResource MaterialDesignRaisedButton}" Height="65" Margin="0,0,39.369,111.162" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="126.877" Background="#FF673AB7">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="NEXT" FontFamily="Roboto" FontSize="20" Foreground="#FFF7F6F6"/>
+            </Button>
+            <TextBlock x:Name="textBlock" Height="91.936" Margin="102.76,221.996,39.369,0" TextWrapping="Wrap" Text="Do you like the taste of beer?" VerticalAlignment="Top" FontFamily="Roboto" FontSize="40" Foreground="White"/>
 
-    </Grid>
+        </Grid>
+    </Canvas>
 </Window>
