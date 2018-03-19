@@ -15,6 +15,7 @@ using MaterialDesignThemes.Wpf;
 
 namespace DatingApp
 {
+    
     /// <summary>
     /// Interaction logic for CompassSearch.xaml
     /// </summary>
