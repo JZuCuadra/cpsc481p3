@@ -63,12 +63,28 @@
     <Compile Include="CompassSearch.xaml.cs">
       <DependentUpon>CompassSearch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DetailViewRomantic.xaml.cs">
+      <DependentUpon>DetailViewRomantic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuOverlay.xaml.cs">
+      <DependentUpon>MenuOverlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NoSearchResultWarning.xaml.cs">
+      <DependentUpon>NoSearchResultWarning.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Searching.xaml.cs">
+      <DependentUpon>Searching.xaml</DependentUpon>
     </Compile>
     <Page Include="CompassSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailViewRomantic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
@@ -96,6 +112,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MenuOverlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NoSearchResultWarning.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,6 +127,10 @@
     <Page Include="PersonalityTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Searching.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
