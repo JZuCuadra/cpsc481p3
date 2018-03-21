@@ -42,6 +42,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,12 +65,31 @@
     <Compile Include="CompassSearch.xaml.cs">
       <DependentUpon>CompassSearch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DetailViewRomantic.xaml.cs">
+      <DependentUpon>DetailViewRomantic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MatchAnimation.xaml.cs">
+      <DependentUpon>MatchAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NoSearchResultsWarning.xaml.cs">
+      <DependentUpon>NoSearchResultsWarning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileCard.xaml.cs">
+      <DependentUpon>ProfileCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Searching.xaml.cs">
+      <DependentUpon>Searching.xaml</DependentUpon>
     </Compile>
     <Page Include="CompassSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailViewRomantic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
@@ -96,6 +117,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MatchAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NoSearchResultsWarning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfileCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,6 +136,10 @@
     <Page Include="PersonalityTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Searching.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +187,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icons\notification-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\profile-with-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
