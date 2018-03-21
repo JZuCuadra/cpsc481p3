@@ -1,0 +1,54 @@
+﻿<Window x:Class="DatingApp.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DatingApp"
+        mc:Ignorable="d"
+        Title="Register" Height="890" Width="500"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Canvas>
+        <local:MenuOverlay x:Name="menu" Height="859" Panel.ZIndex="1">
+        </local:MenuOverlay>
+        <Grid Height="770" Width="482">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Margin="15"  Style="{StaticResource MaterialDesignTitleTextBlock}" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top">SETTINGS</TextBlock>
+            <ComboBox Grid.Row="1" Grid.Column="1" materialDesign:HintAssist.Hint="LEVEL" Style="{StaticResource MaterialDesignFloatingHintComboBox}" VerticalAlignment="Top">
+                <ComboBoxItem>NONE</ComboBoxItem>
+                <ComboBoxItem>INFREQUENT</ComboBoxItem>
+                <ComboBoxItem>FREQUENT</ComboBoxItem>
+            </ComboBox>
+            <ComboBox Grid.Row="2" Grid.Column="1" materialDesign:HintAssist.Hint="FONT" Style="{StaticResource MaterialDesignFloatingHintComboBox}" VerticalAlignment="Top">
+                <ComboBoxItem>ROBOTO</ComboBoxItem>
+                <ComboBoxItem>CELIBRI</ComboBoxItem>
+                <ComboBoxItem>NEW ROMAN</ComboBoxItem>
+            </ComboBox>
+            <ComboBox Grid.Row="3" Grid.Column="1" materialDesign:HintAssist.Hint="THEME" Style="{StaticResource MaterialDesignFloatingHintComboBox}" VerticalAlignment="Top">
+                <ComboBoxItem>LIGHT</ComboBoxItem>
+                <ComboBoxItem>MIDIUM</ComboBoxItem>
+                <ComboBoxItem>DARK</ComboBoxItem>
+            </ComboBox>
+            <TextBlock Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">EMAIL</TextBlock>
+            <ToggleButton Grid.Row="4" Grid.Column="1" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
+        </Grid>
+    </Canvas>
+</Window>

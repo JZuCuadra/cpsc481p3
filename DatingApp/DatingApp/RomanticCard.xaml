@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="DatingApp.RomanticCard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
+    xmlns:local="clr-namespace:DatingApp"
+    mc:Ignorable="d"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TextElement.FontWeight="Regular"
+    TextElement.FontSize="13"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    Background="{DynamicResource MaterialDesignPaper}"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    d:DesignHeight="300" d:DesignWidth="300"
+    Margin="10">
+    <Grid>
+        <materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Canvas>
+        </Canvas>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="130*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="13*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="nameHeader" Style="{StaticResource MaterialDesignHeadlineTextBlock}" HorizontalAlignment="Left" FontWeight="Bold" FontSize="24" VerticalAlignment="Center">Jane Doe</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">AGE</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">GENDER</TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center">JOB</TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center">EDUCATION</TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center">BIO</TextBlock>
+            <TextBlock x:Name="age" Grid.Row="1" Grid.Column="1">age...</TextBlock>
+            <TextBlock x:Name="gender" Grid.Row="2" Grid.Column="1">gender...</TextBlock>
+            <TextBlock x:Name="job" Grid.Row="3" Grid.Column="1">job...</TextBlock>
+            <TextBlock x:Name="education" Grid.Row="4" Grid.Column="1">education...</TextBlock>
+            <TextBlock x:Name="bio" Grid.Row="5" Grid.Column="1">bio... lots and lots of bio</TextBlock>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -15,20 +15,20 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}">
     <Canvas x:Name="loginBtn">
-        <materialDesign:Card Padding="32" Canvas.Left="80" Canvas.Top="80" Height="160" Width="320"/>
-        <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Canvas.Left="80" Canvas.Top="251">Credentials</TextBlock>
-        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="USERNAME" Canvas.Left="80" Canvas.Top="280" Width="320" Height="40" FontSize="18"/>
-        <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="PASSWORD" Canvas.Left="80" Canvas.Top="325" Width="320" Height="40" FontSize="18"/>
-        <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="CONFIRM PASSWORD" Canvas.Left="80" Canvas.Top="370" Width="320" Height="40" FontSize="18"/>
-        <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Canvas.Left="80" Canvas.Top="448">Profile</TextBlock>
-        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="FIRST NAME" Canvas.Left="80" Canvas.Top="470" Width="320" Height="40" FontSize="18"/>
-        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="LAST NAME" Canvas.Left="80" Canvas.Top="515" Width="320" Height="40" FontSize="18"/>
-        <ComboBox materialDesign:HintAssist.Hint="GENDER" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Canvas.Left="80" Canvas.Top="560" Width="320" Height="45" FontSize="18">
+        <materialDesign:Card Padding="32" Canvas.Left="80" Canvas.Top="37" Height="160" Width="320"/>
+        <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Canvas.Left="80" Canvas.Top="211">Credentials</TextBlock>
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="USERNAME" Canvas.Left="80" Canvas.Top="237" Width="320" Height="40" FontSize="18"/>
+        <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="PASSWORD" Canvas.Left="80" Canvas.Top="282" Width="320" Height="40" FontSize="18"/>
+        <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="CONFIRM PASSWORD" Canvas.Left="80" Canvas.Top="327" Width="320" Height="40" FontSize="18"/>
+        <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Canvas.Left="80" Canvas.Top="381">Profile</TextBlock>
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="FIRST NAME" Canvas.Left="80" Canvas.Top="403" Width="320" Height="40" FontSize="18"/>
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="LAST NAME" Canvas.Left="80" Canvas.Top="448" Width="320" Height="40" FontSize="18"/>
+        <ComboBox materialDesign:HintAssist.Hint="GENDER" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Canvas.Left="80" Canvas.Top="493" Width="320" Height="45" FontSize="18">
             <ComboBoxItem>MALE</ComboBoxItem>
             <ComboBoxItem>FEMALE</ComboBoxItem>
             <ComboBoxItem>OTHER</ComboBoxItem>
         </ComboBox>
-        <GroupBox  Header="PHOTOS" Style="{DynamicResource MaterialDesignCardGroupBox}" Margin="0" Canvas.Left="80" Canvas.Top="610" Height="220" Width="320">
+        <GroupBox  Header="PHOTOS" Style="{DynamicResource MaterialDesignCardGroupBox}" Margin="0" Canvas.Left="80" Canvas.Top="553" Height="220" Width="320">
             <GroupBox.HeaderTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -37,9 +37,12 @@
                     </StackPanel>
                 </DataTemplate>
             </GroupBox.HeaderTemplate>
-            <Button Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="291" Canvas.Top="550" Margin="0,125,0,5">
+            <Button Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="291" Canvas.Top="550" Margin="0,119,0,1">
                 <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ADD</TextBlock>
             </Button>
         </GroupBox>
+        <Button Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="179" Canvas.Top="800">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">REGISTER</TextBlock>
+        </Button>
     </Canvas>
 </Window>

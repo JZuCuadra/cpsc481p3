@@ -65,40 +65,21 @@
     <Compile Include="CompassSearch.xaml.cs">
       <DependentUpon>CompassSearch.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DetailViewRomantic.xaml.cs">
-      <DependentUpon>DetailViewRomantic.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MatchAnimation.xaml.cs">
-      <DependentUpon>MatchAnimation.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="NoSearchResultsWarning.xaml.cs">
-      <DependentUpon>NoSearchResultsWarning.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ProfileCard.xaml.cs">
-      <DependentUpon>ProfileCard.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DetailViewRomantic.xaml.cs">
-      <DependentUpon>DetailViewRomantic.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MenuOverlay.xaml.cs">
       <DependentUpon>MenuOverlay.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="NoSearchResultWarning.xaml.cs">
-      <DependentUpon>NoSearchResultWarning.xaml</DependentUpon>
     </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Searching.xaml.cs">
-      <DependentUpon>Searching.xaml</DependentUpon>
+    <Compile Include="RomanticCard.xaml.cs">
+      <DependentUpon>RomanticCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
     <Page Include="CompassSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DetailViewRomantic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
@@ -107,10 +88,6 @@
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -122,27 +99,7 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Page Include="MenuOverlay.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="NoSearchResultWarning.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MatchAnimation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="NoSearchResultsWarning.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ProfileCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,19 +107,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PersonalityTest.xaml">
+    <Page Include="RomanticCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Searching.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Settings.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PersonalityTest.xaml.cs">
-      <DependentUpon>PersonalityTest.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace DatingApp
 {
     /// <summary>
-    /// Interaction logic for ProfileCard.xaml
+    /// Interaction logic for RomanticCard.xaml
     /// </summary>
-    public partial class ProfileCard : UserControl
+    public partial class RomanticCard : UserControl
     {
-        public ProfileCard()
+        public RomanticCard()
         {
             InitializeComponent();
         }

@@ -24,27 +24,26 @@ namespace DatingApp
         public CompassSearch()
         {
             InitializeComponent();
-            for(int r = 0; r < compassGrid.RowDefinitions.Count; r++)
+            this.menu.navBar.SelectedIndex = 1;
+            for (int r = 0; r < compassGrid.RowDefinitions.Count; r++)
             {
                 for (int c = 0; c < compassGrid.ColumnDefinitions.Count; c++)
                 {
-                    Card card = CreateCard();
+                    UserControl card = CreateCard();
                     SetPosition(card, c, r);
                 }
             }
         }
 
-        private Card CreateCard()
+        private UserControl CreateCard()
         {
-            Card card = new Card();
+            UserControl card = new RomanticCard();
             card.VerticalAlignment = VerticalAlignment.Stretch;
             card.HorizontalAlignment = HorizontalAlignment.Stretch;
-            card.Padding = new Thickness(16);
-            card.Margin = new Thickness(16);
             return card;
         }
 
-        private void SetPosition(UIElement card, int x, int y)
+        private void SetPosition(UserControl card, int x, int y)
         {
             if (x < 0 || x >= compassGrid.ColumnDefinitions.Count) throw new ArgumentException();
             if (y < 0 || y >= compassGrid.ColumnDefinitions.Count) throw new ArgumentException();
@@ -85,18 +84,18 @@ namespace DatingApp
             for (int r = 0; r < compassGrid.RowDefinitions.Count; r++)
             {
                 var items = compassGrid.Children
-                    .Cast<UIElement>()
+                    .Cast<UserControl>()
                     .Where(i => Grid.GetRow(i) == r)
                     .OrderBy(i => Grid.GetColumn(i))
                     .ToList();
                 compassGrid.Children.Remove(left ? items.First() : items.Last());
                 items.RemoveAt(left ? 0 : items.Count - 1);
-                foreach (UIElement item in items)
+                foreach (UserControl item in items)
                 {
                     item.SetValue(Grid.ColumnProperty, (int)item.GetValue(Grid.ColumnProperty) + offset);
                 }
-                Card card = CreateCard();
-                card.Content = DateTime.Now.ToString();
+                RomanticCard card = (RomanticCard)CreateCard();
+                card.age.Text = DateTime.Now.ToLongTimeString();
                 SetPosition(card, position, r);
             }
         }
@@ -108,18 +107,18 @@ namespace DatingApp
             for(int c = 0; c < compassGrid.ColumnDefinitions.Count; c++)
             {
                 var items = compassGrid.Children
-                    .Cast<UIElement>()
+                    .Cast<UserControl>()
                     .Where(i => Grid.GetColumn(i) == c)
                     .OrderBy(i => Grid.GetRow(i))
                     .ToList();
                 compassGrid.Children.Remove(up ? items.First() : items.Last());
                 items.RemoveAt(up ? 0 : items.Count - 1);
-                foreach(UIElement item in items)
+                foreach(UserControl item in items)
                 {
                     item.SetValue(Grid.RowProperty, (int)item.GetValue(Grid.RowProperty) + offset);
                 }
-                Card card = CreateCard();
-                card.Content = DateTime.Now.ToString();
+                RomanticCard card = (RomanticCard)CreateCard();
+                card.age.Text = DateTime.Now.ToLongTimeString();
                 SetPosition(card, c, position);
             }
         }

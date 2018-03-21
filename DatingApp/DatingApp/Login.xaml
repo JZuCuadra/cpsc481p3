@@ -16,10 +16,9 @@
         FontFamily="{DynamicResource MaterialDesignFont}">
     <Canvas x:Name="loginBtn">
         <materialDesign:Card Padding="32" Canvas.Left="80" Canvas.Top="80" Height="320" Width="320"/>
-        <Button Style="{StaticResource MaterialDesignRaisedButton}" Canvas.Left="80" Canvas.Top="480" Height="65" Width="320">
-            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">LOGIN</TextBlock>
-        </Button>
-        <Button Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="291" Canvas.Top="550">
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="USERNAME" Canvas.Left="80" Canvas.Top="453" Width="320" Height="40" FontSize="18"/>
+        <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="PASSWORD" Canvas.Left="80" Canvas.Top="499" Width="320" Height="40" FontSize="18"/>
+        <Button Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="291" Canvas.Top="544">
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">SIGN UP</TextBlock>
         </Button>
         <Button Style="{StaticResource MaterialDesignRaisedButton}" Canvas.Left="80" Canvas.Top="640" Height="65" Width="320">
