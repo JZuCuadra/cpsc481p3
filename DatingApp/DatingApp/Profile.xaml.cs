@@ -43,5 +43,12 @@ namespace DatingApp
                 detailsGrid.Children.Remove(this.messageBtn);
             }
         }
+
+        private void messageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Messaging messages = new Messaging();
+            messages.Show();
+            Window.GetWindow(this).Close();
+        }
     }
 }
