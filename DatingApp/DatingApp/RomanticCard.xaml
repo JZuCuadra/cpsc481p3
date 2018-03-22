@@ -18,7 +18,7 @@
     d:DesignHeight="300" d:DesignWidth="300"
     Margin="10">
     <Grid>
-        <materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" GotFocus="Card_GotFocus"/>
+        <materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         <Canvas x:Name="contentCanvas"/>
         <Grid x:Name="detailsGrid">
             <Grid.RowDefinitions>
