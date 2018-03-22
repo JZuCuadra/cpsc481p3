@@ -46,10 +46,5 @@ namespace DatingApp
             window.Show();
             Window.GetWindow(this).Close();
         }
-
-        private void Card_GotFocus(object sender, RoutedEventArgs e)
-        {
-            int x = 2;
-        }
     }
 }
