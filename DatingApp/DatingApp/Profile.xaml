@@ -1,0 +1,47 @@
+﻿<Window x:Class="DatingApp.Profile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DatingApp"
+        mc:Ignorable="d"
+        Title="Profile" Height="890" Width="500"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Canvas>
+        <local:MenuOverlay x:Name="menu" Height="859" Panel.ZIndex="1"/>
+        <materialDesign:Card Padding="32" Canvas.Left="94" Canvas.Top="10" Height="232" Width="260"/>
+        <TextBlock x:Name="name" Style="{StaticResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="94" Canvas.Top="247" FontSize="36" Width="260">JANE DOE</TextBlock>
+        <Grid x:Name="detailsGrid"  Width="472" Height="470" Canvas.Left="10" Canvas.Top="295">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="120*"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Controls -->
+            <TextBox x:Name="age" Grid.Row="0" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="AGE" FontSize="18" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" Text="21"/>
+            <TextBox x:Name="gender" Grid.Row="1" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="GENDER" FontSize="18" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" Text="female"/>
+            <TextBox x:Name="job" Grid.Row="2" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="JOB" FontSize="18" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" Text="computer science"/>
+            <TextBox x:Name="education" Grid.Row="3" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="EDUCATION" FontSize="18" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" Text="B.Sci Computer Science"/>
+            <TextBox x:Name="bio" Grid.Row="4" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextWrapping="Wrap" materialDesign:HintAssist.Hint="BIO" FontSize="18" VerticalContentAlignment="Stretch" Text="I love long walks on the beach..."/>
+            <Button x:Name="messageBtn" Grid.Row="5" Grid.Column="0" Style="{StaticResource MaterialDesignFlatButton}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">MESSAGE</TextBlock>
+            </Button>
+            <Button x:Name="editPhotosBtn" Grid.Row="5" Grid.Column="0" Style="{StaticResource MaterialDesignFlatButton}" >
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">EDIT PHOTOS</TextBlock>
+            </Button>
+        </Grid>
+    </Canvas>
+</Window>

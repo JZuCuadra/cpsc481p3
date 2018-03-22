@@ -10,13 +10,7 @@
         <local:MenuOverlay x:Name="menu" Height="859" Panel.ZIndex="1">
         </local:MenuOverlay>
         <ScrollViewer Height="860" Width="515">
-            <UniformGrid Columns="1" HorizontalAlignment="Stretch" Width="500">
-                <local:RomanticCard Height="300"/>
-                <local:RomanticCard/>
-                <local:RomanticCard/>
-                <local:RomanticCard/>
-                <local:RomanticCard/>
-                <local:RomanticCard/>
+            <UniformGrid x:Name="matchesGrid" Columns="1" HorizontalAlignment="Stretch" Width="465">
             </UniformGrid>
         </ScrollViewer>
         

@@ -24,7 +24,7 @@ namespace DatingApp
         public CompassSearch()
         {
             InitializeComponent();
-            this.menu.navBar.SelectedIndex = 1;
+            this.menu.initIndex(1);
             for (int r = 0; r < compassGrid.RowDefinitions.Count; r++)
             {
                 for (int c = 0; c < compassGrid.ColumnDefinitions.Count; c++)

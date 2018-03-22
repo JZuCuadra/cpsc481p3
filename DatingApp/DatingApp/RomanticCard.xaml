@@ -18,10 +18,9 @@
     d:DesignHeight="300" d:DesignWidth="300"
     Margin="10">
     <Grid>
-        <materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <Canvas>
-        </Canvas>
-        <Grid>
+        <materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" GotFocus="Card_GotFocus"/>
+        <Canvas x:Name="contentCanvas"/>
+        <Grid x:Name="detailsGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50*"/>
                 <RowDefinition Height="21*"/>
@@ -29,6 +28,8 @@
                 <RowDefinition Height="21*"/>
                 <RowDefinition Height="21*"/>
                 <RowDefinition Height="130*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*"/>

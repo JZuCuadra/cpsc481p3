@@ -47,8 +47,11 @@
                 <ComboBoxItem>MIDIUM</ComboBoxItem>
                 <ComboBoxItem>DARK</ComboBoxItem>
             </ComboBox>
-            <TextBlock Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">EMAIL</TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">EMAIL ALERTS</TextBlock>
             <ToggleButton Grid.Row="4" Grid.Column="1" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Button Grid.Row="5" Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">RETAKE QUIZ</TextBlock>
+            </Button>
         </Grid>
     </Canvas>
 </Window>

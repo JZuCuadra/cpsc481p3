@@ -20,9 +20,36 @@ namespace DatingApp
     /// </summary>
     public partial class RomanticCard : UserControl
     {
+        private bool isMatched { get; set; }
         public RomanticCard()
         {
             InitializeComponent();
+        }
+
+        public void makeMatch()
+        {
+            if (isMatched) return;
+            Button btn = new Button();
+            btn.Style = (Style)FindResource("MaterialDesignFlatButton");
+            TextBlock text = new TextBlock();
+            Canvas.SetTop(btn, 256d);
+            Canvas.SetLeft(btn, 150d);
+            text.Text = "VIEW PROFILE";
+            btn.Content = text;
+            contentCanvas.Children.Add(btn);
+            btn.Click += message_Click;
+        }
+
+        private void message_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new Profile(ProfileType.publicProfile);
+            window.Show();
+            Window.GetWindow(this).Close();
+        }
+
+        private void Card_GotFocus(object sender, RoutedEventArgs e)
+        {
+            int x = 2;
         }
     }
 }

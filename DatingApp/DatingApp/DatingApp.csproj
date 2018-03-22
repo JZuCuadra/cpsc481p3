@@ -68,6 +68,12 @@
     <Compile Include="MenuOverlay.xaml.cs">
       <DependentUpon>MenuOverlay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Messaging.xaml.cs">
+      <DependentUpon>Messaging.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
@@ -100,6 +106,14 @@
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Page Include="MenuOverlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Messaging.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Profile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
