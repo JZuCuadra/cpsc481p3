@@ -23,5 +23,12 @@ namespace DatingApp
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Register reg = new Register();
+            reg.Show();
+            Window.GetWindow(this).Close();
+        }
     }
 }

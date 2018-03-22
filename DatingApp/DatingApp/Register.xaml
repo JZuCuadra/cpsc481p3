@@ -41,7 +41,7 @@
                 <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ADD</TextBlock>
             </Button>
         </GroupBox>
-        <Button Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="179" Canvas.Top="800">
+        <Button x:Name="rebBtn" Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="179" Canvas.Top="800" Click="regBtn_Click">
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">REGISTER</TextBlock>
         </Button>
     </Canvas>

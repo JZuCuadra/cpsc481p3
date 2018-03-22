@@ -23,5 +23,12 @@ namespace DatingApp
         {
             InitializeComponent();
         }
+
+        private void regBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Survey survey = new Survey();
+            survey.Show();
+            Window.GetWindow(this).Close();
+        }
     }
 }
