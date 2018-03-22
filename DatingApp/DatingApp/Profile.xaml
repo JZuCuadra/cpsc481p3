@@ -36,7 +36,7 @@
             <TextBox x:Name="job" Grid.Row="2" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="JOB" FontSize="18" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" Text="computer science"/>
             <TextBox x:Name="education" Grid.Row="3" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="EDUCATION" FontSize="18" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" Text="B.Sci Computer Science"/>
             <TextBox x:Name="bio" Grid.Row="4" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextWrapping="Wrap" materialDesign:HintAssist.Hint="BIO" FontSize="18" VerticalContentAlignment="Stretch" Text="I love long walks on the beach..."/>
-            <Button x:Name="messageBtn" Grid.Row="5" Grid.Column="0" Style="{StaticResource MaterialDesignFlatButton}">
+            <Button x:Name="messageBtn" Grid.Row="5" Grid.Column="0" Style="{StaticResource MaterialDesignFlatButton}" Click="messageBtn_Click">
                 <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">MESSAGE</TextBlock>
             </Button>
             <Button x:Name="editPhotosBtn" Grid.Row="5" Grid.Column="0" Style="{StaticResource MaterialDesignFlatButton}" >
