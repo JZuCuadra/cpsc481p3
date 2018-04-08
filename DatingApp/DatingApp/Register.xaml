@@ -13,7 +13,8 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}">
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStartupLocation="CenterScreen">
     <Canvas x:Name="loginBtn">
         <materialDesign:Card Padding="32" Canvas.Left="80" Canvas.Top="37" Height="160" Width="320"/>
         <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Canvas.Left="80" Canvas.Top="211">Credentials</TextBlock>

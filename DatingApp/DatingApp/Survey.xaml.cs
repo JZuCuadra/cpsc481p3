@@ -28,7 +28,7 @@ namespace DatingApp
             for(int i = 0; i < 3; i++)
             {
                 string title = "QUESTION " + i.ToString();
-                string text = "this is question " + i.ToString() + " text...";
+                string text = "this is question " + i.ToString() + " What is you favorite color? ";
                 questions.Add(new Tuple<string, string>(title, text));
             }
             prevBtn_Click(null, null);
