@@ -48,8 +48,24 @@ namespace DatingApp
 
         private void nextBtn_Click(object sender, RoutedEventArgs e)
         {
-     
-            if(yesBtn.IsChecked == false && noBtn.IsChecked == false) 
+            index++;
+            prevBtn.IsEnabled = true;
+            TextBlock block = (TextBlock)nextBtn.Content;
+            if (index >= questions.Count)
+            {
+                Home window = new Home();
+                window.Show();
+                Window.GetWindow(this).Close();
+                return;
+            }
+            else if (index == questions.Count - 1)
+            {
+                block.Text = "SUMBIT";
+            }
+            questionTitle.Text = questions[index].Item1;
+            questionText.Text = questions[index].Item2;
+
+           /* if (yesBtn.IsChecked == false && noBtn.IsChecked == false) 
             {
                 System.Windows.Forms.MessageBox.Show("Please Select an answer");
             }
@@ -73,7 +89,7 @@ namespace DatingApp
                 questionText.Text = questions[index].Item2;
                 yesBtn.IsChecked = false;
                 noBtn.IsChecked = false;
-            }
+            }*/
         }
 
         private void prevBtn_Click(object sender, RoutedEventArgs e)

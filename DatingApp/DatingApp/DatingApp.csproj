@@ -65,6 +65,9 @@
     <Compile Include="CompassSearch.xaml.cs">
       <DependentUpon>CompassSearch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HomeCards.xaml.cs">
+      <DependentUpon>HomeCards.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MenuOverlay.xaml.cs">
       <DependentUpon>MenuOverlay.xaml</DependentUpon>
     </Compile>
@@ -91,6 +94,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeCards.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
