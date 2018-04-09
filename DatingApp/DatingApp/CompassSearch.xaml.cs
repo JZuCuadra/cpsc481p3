@@ -16,7 +16,7 @@ using System.Windows.Media.Animation;
 
 namespace DatingApp
 {
-    
+
     /// <summary>
     /// Interaction logic for CompassSearch.xaml
     /// </summary>
@@ -58,22 +58,32 @@ namespace DatingApp
 
         private void compassSearchWindow_KeyUp(object sender, KeyEventArgs e)
         {
+            Storyboard sb;
             switch (e.Key)
             {
                 case Key.Left:
-                    Storyboard sb = this.FindResource("PlayAnimation") as Storyboard;
+                    sb = this.FindResource("SlideLeft") as Storyboard;
                     Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftHorizontal(true);
                     sb.Begin();
                     break;
                 case Key.Right:
+                    sb = this.FindResource("SlideRight") as Storyboard;
+                    Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftHorizontal(false);
+                    sb.Begin();
                     break;
                 case Key.Up:
+                    sb = this.FindResource("SlideUp") as Storyboard;
+                    Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftVertical(true);
+                    sb.Begin();
                     break;
                 case Key.Down:
+                    sb = this.FindResource("SlideDown") as Storyboard;
+                    Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftVertical(false);
+                    sb.Begin();
                     break;
                 default:
                     break;
@@ -83,7 +93,7 @@ namespace DatingApp
 
         private void ShiftHorizontal(bool left = false)
         {
-            
+
             int offset = left ? -1 : 1;
             int position = left ? compassGrid.ColumnDefinitions.Count - 1 : 0;
             for (int r = 0; r < compassGrid.RowDefinitions.Count; r++)

@@ -17,18 +17,26 @@
         WindowStartupLocation="CenterScreen">
     <Canvas>
         <materialDesign:Card Padding="32" Canvas.Left="80" Canvas.Top="80" Height="320" Width="320"/>
-        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="USERNAME" Canvas.Left="80" Canvas.Top="453" Width="320" Height="40" FontSize="18"/>
-        <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="PASSWORD" Canvas.Left="80" Canvas.Top="499" Width="320" Height="40" FontSize="18"/>
-        <Button Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="195" Canvas.Top="544" Click="Button_Click">
+        <TextBox x:Name="UsernameTxtBox" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="USERNAME" Canvas.Left="80" Canvas.Top="453" Width="320" Height="40" FontSize="18">
+            <TextBox.Text>
+                <Binding Path="Username">
+                    <Binding.ValidationRules>
+                        <local:NotEmptyValidationRule x:Name="UsernameValidation" ValidatesOnTargetUpdated="True"/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <PasswordBox x:Name="PasswordTxtBox"  Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="PASSWORD" Canvas.Left="80" Canvas.Top="499" Width="320" Height="40" FontSize="18"/>
+        <Button Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="195" Canvas.Top="544" Click="Register_Click">
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">SIGN UP</TextBlock>
         </Button>
-        <Button Style="{StaticResource MaterialDesignRaisedButton}" Canvas.Left="80" Canvas.Top="640" Height="65" Width="320">
+        <Button Style="{StaticResource MaterialDesignRaisedButton}" Canvas.Left="80" Canvas.Top="640" Height="65" Width="320" Click="OAuth_Click">
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">FACEBOOK</TextBlock>
         </Button>
-        <Button Style="{StaticResource MaterialDesignRaisedButton}" Canvas.Left="80" Canvas.Top="725" Height="65" Width="320">
+        <Button Style="{StaticResource MaterialDesignRaisedButton}" Canvas.Left="80" Canvas.Top="725" Height="65" Width="320" Click="OAuth_Click">
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">GOOGLE+</TextBlock>
         </Button>
-        <Button x:Name="loginBtn" Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="309" Canvas.Top="544" Click="Button_Click">
+        <Button x:Name="loginBtn" Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="309" Canvas.Top="544" Click="Login_Click">
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="LOGIN"/></TextBlock>
         </Button>
     </Canvas>

@@ -74,6 +74,7 @@
     <Compile Include="Messaging.xaml.cs">
       <DependentUpon>Messaging.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NotEmptyValidationRule.cs" />
     <Compile Include="Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>

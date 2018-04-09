@@ -16,8 +16,17 @@
         FontFamily="{DynamicResource MaterialDesignFont}" KeyUp="compassSearchWindow_KeyUp"
         WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <Storyboard x:Key="PlayAnimation">
+        <Storyboard x:Key="SlideLeft">
             <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Left)" From="100" To="-200" AccelerationRatio=".1"/>
+        </Storyboard>
+        <Storyboard x:Key="SlideRight">
+            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Left)" From="-500" To="-200" AccelerationRatio=".1"/>
+        </Storyboard>
+        <Storyboard x:Key="SlideUp">
+            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Top)" From="250" To="-50" AccelerationRatio=".1"/>
+        </Storyboard>
+        <Storyboard x:Key="SlideDown">
+            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Top)" From="-350" To="-50" AccelerationRatio=".1"/>
         </Storyboard>
     </Window.Resources>
     <Canvas>
