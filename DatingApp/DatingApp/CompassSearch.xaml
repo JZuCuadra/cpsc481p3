@@ -15,19 +15,24 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}" KeyUp="compassSearchWindow_KeyUp"
         WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Storyboard x:Key="PlayAnimation">
+            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Left)" From="100" To="-200" AccelerationRatio=".1"/>
+        </Storyboard>
+    </Window.Resources>
     <Canvas>
         <local:MenuOverlay x:Name="menu" Width="492" Height="859" Panel.ZIndex="1">
         </local:MenuOverlay>
-        <Grid x:Name="compassGrid" Height="1350" Canvas.Left="-300" Width="1075" Canvas.Top="-265">
+        <Grid x:Name="compassGrid" Height="900" Canvas.Left="-200" Width="900" Canvas.Top="-50">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="300"/>
             </Grid.RowDefinitions>
         </Grid>
     </Canvas>

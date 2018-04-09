@@ -50,6 +50,9 @@ namespace DatingApp
                 case 2:
                     window = new Profile(ProfileType.myProfile);
                     break;
+                case 3:
+                    window = new Settings();
+                    break;
                 default:
                     window = null;
                     break;

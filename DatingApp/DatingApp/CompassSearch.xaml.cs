@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MaterialDesignThemes.Wpf;
+using System.Windows.Media.Animation;
 
 namespace DatingApp
 {
@@ -60,7 +61,10 @@ namespace DatingApp
             switch (e.Key)
             {
                 case Key.Left:
+                    Storyboard sb = this.FindResource("PlayAnimation") as Storyboard;
+                    Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftHorizontal(true);
+                    sb.Begin();
                     break;
                 case Key.Right:
                     ShiftHorizontal(false);
@@ -79,6 +83,7 @@ namespace DatingApp
 
         private void ShiftHorizontal(bool left = false)
         {
+            
             int offset = left ? -1 : 1;
             int position = left ? compassGrid.ColumnDefinitions.Count - 1 : 0;
             for (int r = 0; r < compassGrid.RowDefinitions.Count; r++)

@@ -17,35 +17,37 @@
     FontFamily="{DynamicResource MaterialDesignFont}"
     d:DesignHeight="300" d:DesignWidth="300"
     Margin="10">
-    <Grid>
-        <!--<materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
-        <Canvas x:Name="contentCanvas"/>
-        <Grid x:Name="detailsGrid">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50*"/>
-                <RowDefinition Height="21*"/>
-                <RowDefinition Height="21*"/>
-                <RowDefinition Height="21*"/>
-                <RowDefinition Height="21*"/>
-                <RowDefinition Height="130*"/>
-                <RowDefinition Height="20*"/>
-                <RowDefinition Height="3*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="7*"/>
-                <ColumnDefinition Width="13*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="nameHeader" Style="{StaticResource MaterialDesignHeadlineTextBlock}" HorizontalAlignment="Left" FontWeight="Bold" FontSize="24" VerticalAlignment="Center">Jane Doe</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">AGE</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">GENDER</TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center">JOB</TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center">EDUCATION</TextBlock>
-            <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center">BIO</TextBlock>
-            <TextBlock x:Name="age" Grid.Row="1" Grid.Column="1">age...</TextBlock>
-            <TextBlock x:Name="gender" Grid.Row="2" Grid.Column="1">gender...</TextBlock>
-            <TextBlock x:Name="job" Grid.Row="3" Grid.Column="1">job...</TextBlock>
-            <TextBlock x:Name="education" Grid.Row="4" Grid.Column="1">education...</TextBlock>
-            <TextBlock x:Name="bio" Grid.Row="5" Grid.Column="1">bio... lots and lots of bio</TextBlock>
+    <materialDesign:Card>
+        <Grid Width="300" Height="300">
+            <!--<materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
+            <Canvas x:Name="contentCanvas"/>
+            <Grid x:Name="detailsGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="21*"/>
+                    <RowDefinition Height="21*"/>
+                    <RowDefinition Height="21*"/>
+                    <RowDefinition Height="21*"/>
+                    <RowDefinition Height="130*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="13*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="nameHeader" Style="{StaticResource MaterialDesignHeadlineTextBlock}" HorizontalAlignment="Left" FontWeight="Bold" FontSize="24" VerticalAlignment="Center">Jane Doe</TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">AGE</TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">GENDER</TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center">JOB</TextBlock>
+                <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center">EDUCATION</TextBlock>
+                <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center">BIO</TextBlock>
+                <TextBlock x:Name="age" Grid.Row="1" Grid.Column="1">age...</TextBlock>
+                <TextBlock x:Name="gender" Grid.Row="2" Grid.Column="1">gender...</TextBlock>
+                <TextBlock x:Name="job" Grid.Row="3" Grid.Column="1">job...</TextBlock>
+                <TextBlock x:Name="education" Grid.Row="4" Grid.Column="1">education...</TextBlock>
+                <TextBlock x:Name="bio" Grid.Row="5" Grid.Column="1">bio... lots and lots of bio</TextBlock>
+            </Grid>
         </Grid>
-    </Grid>
+    </materialDesign:Card>
 </UserControl>

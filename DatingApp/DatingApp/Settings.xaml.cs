@@ -22,7 +22,7 @@ namespace DatingApp
         public Settings()
         {
             InitializeComponent();
-            this.menu.initIndex(-1);
+            this.menu.initIndex(3);
         }
     }
 }
