@@ -36,14 +36,15 @@ namespace DatingApp
     public partial class Profile : Window
     {
         //These should be set by the initial quiz. Some should be editable thereafter
-        public string personalName = "EnterYourNameHere";
+        public string personalName = "John Doe";
         public int personalAge = 20;
-        public string personalGender = "EnterYourGenderHere";
-        public string personalJob = "EnterYourJobHere";
-        public string personalEducation = "EnterYourEducationHere";
-        public string personalBio = "WriteYourBioHere";
+        public string personalGender = "Male";
+        public string personalJob = "Enter Your Job/Occupation Here...";
+        public string personalEducation = "Enter Your Education Here...";
+        public string personalBio = "Write Your Bio Here...";
 
-        public string[] publicNames = 
+        //Use the PublicProfile enum to target the desired info from these arrays
+        public static string[] publicNames = 
         {
             "Samuel Gibbons",
             "Hannah Delano",
@@ -51,7 +52,7 @@ namespace DatingApp
             "Ashley Davidson"
         };
         
-        public int[] publicAges =
+        public static int[] publicAges =
         {
             22,
             24,
@@ -59,7 +60,7 @@ namespace DatingApp
             20
         };
         
-        public string[] publicGenders =
+        public static string[] publicGenders =
         {
             "Male",
             "Female",
@@ -67,7 +68,7 @@ namespace DatingApp
             "Female"
         };
         
-        public string[] publicJobs =
+        public static string[] publicJobs =
         {
             "Chemical Engineering Student",
             "Criminal Law Student",
@@ -75,7 +76,7 @@ namespace DatingApp
             "Biomedical Engineering Student"
         };
         
-        public string[] publicEducations =
+        public static string[] publicEducations =
         {
             "BEng Chemical Engineering",
             "LLB Criminal Law",
@@ -83,7 +84,7 @@ namespace DatingApp
             "BSc Biomedical Technology Engineering"
         };
 
-        //attr:profile is optional, set to view a public profile
+        //attr:profile is optional, set to view a particular public profile
         public Profile(ProfileType type, PublicProfile profile = PublicProfile.SAMUEL_GIBBONS)
         {
             InitializeComponent();

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="DatingApp.CasualCard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
+    xmlns:local="clr-namespace:DatingApp"
+    mc:Ignorable="d"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TextElement.FontWeight="Regular"
+    TextElement.FontSize="13"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    Background="{DynamicResource MaterialDesignPaper}"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    d:DesignHeight="300" d:DesignWidth="300"
+    Margin="10">
+    <materialDesign:Card>
+        <Grid Width="300" Height="300">
+            <!--<materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
+            <Canvas x:Name="contentCanvas">
+                <Image x:Name="image" Width="260" Height="220" Canvas.Left="20" Canvas.Top="20" Source="icons/profile-with-background.jpg" Stretch="Fill"/>
+            </Canvas>
+            <TextBlock x:Name="nameAgeHeader" Style="{StaticResource MaterialDesignHeadlineTextBlock}" TextAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" Margin="10,255,0,16" Width="280">Jane Doe, 22</TextBlock>
+        </Grid>
+    </materialDesign:Card>
+</UserControl>

@@ -42,11 +42,11 @@
                 <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center">JOB</TextBlock>
                 <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center">EDUCATION</TextBlock>
                 <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center">BIO</TextBlock>
-                <TextBlock x:Name="age" Grid.Row="1" Grid.Column="1">age...</TextBlock>
-                <TextBlock x:Name="gender" Grid.Row="2" Grid.Column="1">gender...</TextBlock>
-                <TextBlock x:Name="job" Grid.Row="3" Grid.Column="1">job...</TextBlock>
-                <TextBlock x:Name="education" Grid.Row="4" Grid.Column="1">education...</TextBlock>
-                <TextBlock x:Name="bio" Grid.Row="5" Grid.Column="1">bio... lots and lots of bio</TextBlock>
+                <TextBlock x:Name="age" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0">age...</TextBlock>
+                <TextBlock x:Name="gender" Grid.Row="2" Grid.Column="1" Margin="0,0,10,0">gender...</TextBlock>
+                <TextBlock x:Name="job" Grid.Row="3" Grid.Column="1" Margin="0,0,10,0">job...</TextBlock>
+                <TextBlock x:Name="education" Grid.Row="4" Grid.Column="1" Margin="0,0,10,0">education...</TextBlock>
+                <TextBlock x:Name="bio" Grid.Row="5" Grid.Column="1" Margin="0,0,10,0">bio... lots and lots of bio</TextBlock>
             </Grid>
         </Grid>
     </materialDesign:Card>
