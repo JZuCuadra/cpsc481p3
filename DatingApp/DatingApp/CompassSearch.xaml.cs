@@ -66,24 +66,28 @@ namespace DatingApp
                     Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftHorizontal(true);
                     sb.Begin();
+                    this.map.Move(DIRECTION.LEFT);
                     break;
                 case Key.Right:
                     sb = this.FindResource("SlideRight") as Storyboard;
                     Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftHorizontal(false);
                     sb.Begin();
+                    this.map.Move(DIRECTION.RIGHT);
                     break;
                 case Key.Up:
                     sb = this.FindResource("SlideUp") as Storyboard;
                     Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftVertical(true);
                     sb.Begin();
+                    this.map.Move(DIRECTION.UP);
                     break;
                 case Key.Down:
                     sb = this.FindResource("SlideDown") as Storyboard;
                     Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftVertical(false);
                     sb.Begin();
+                    this.map.Move(DIRECTION.DOWN);
                     break;
                 default:
                     break;

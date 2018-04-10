@@ -30,8 +30,8 @@
         </Storyboard>
     </Window.Resources>
     <Canvas>
-        <local:MenuOverlay x:Name="menu" Width="492" Height="859" Panel.ZIndex="1">
-        </local:MenuOverlay>
+        <local:MenuOverlay x:Name="menu" Width="492" Height="859" Panel.ZIndex="1"/>
+        <local:CompassMap x:Name="map" Panel.ZIndex="2" Canvas.Left="282" Canvas.Top="10" />
         <Grid x:Name="compassGrid" Height="900" Canvas.Left="-200" Width="900" Canvas.Top="-50">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="300"/>

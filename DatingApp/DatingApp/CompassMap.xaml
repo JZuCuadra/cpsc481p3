@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="DatingApp.CompassMap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
+    xmlns:local="clr-namespace:DatingApp"
+    mc:Ignorable="d"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TextElement.FontWeight="Regular"
+    TextElement.FontSize="13"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    FontFamily="{DynamicResource MaterialDesignFont}" 
+    d:DesignHeight="200" d:DesignWidth="200">
+    <Canvas>
+        <Ellipse Fill="LightGray" Width="200" Height="200">
+            <Ellipse.Effect>
+                <BlurEffect/>
+            </Ellipse.Effect>
+        </Ellipse>
+        <Rectangle Height="200" Canvas.Left="100" Width="1" Fill="DarkGray" />
+        <Rectangle Height="1" Width="200" Fill="DarkGray" Canvas.Top="100"/>
+        <Ellipse x:Name="StartingPoint" Fill="Red" Height="6" Canvas.Left="98" Canvas.Top="98" Width="6" />
+        <Ellipse x:Name="CurrentPoint" Fill="Blue" Height="6" Canvas.Left="98" Canvas.Top="98" Width="6" />
+    </Canvas>
+</UserControl>
