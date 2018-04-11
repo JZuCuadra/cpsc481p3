@@ -24,10 +24,21 @@ namespace DatingApp
         public HomeCards()
         {
             InitializeComponent();
+            this.buttonHomeCard.Click += ButtonHomeCard_Click;    
+
         }
+
+        private void ButtonHomeCard_Click(object sender, RoutedEventArgs e)
+        {
+            buttonHomeCard.Visibility = Visibility.Hidden;
+            Window window = new Messaging();
+            window.Show();
+            Window.GetWindow(this).Close();
+        }
+
         public void makeMatch()
         {
-            if (isMatched) return;
+            /*if (isMatched) return;
             Button btn = new Button();
             btn.Style = (Style)FindResource("MaterialDesignFlatButton");
             TextBlock text = new TextBlock();
@@ -36,7 +47,7 @@ namespace DatingApp
             text.Text = "VIEW PROFILE";
             btn.Content = text;
             contentCanvas.Children.Add(btn);
-            btn.Click += message_Click;
+            btn.Click += message_Click;*/
         }
 
         private void message_Click(object sender, RoutedEventArgs e)
