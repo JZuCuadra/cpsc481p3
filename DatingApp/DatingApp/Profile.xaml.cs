@@ -70,18 +70,36 @@ namespace DatingApp
         
         public static string[] publicJobs =
         {
-            "Chemical Engineering Student",
+            "Chemical Engineer",
             "Criminal Law Student",
-            "Performing Arts Student",
-            "Biomedical Engineering Student"
+            "Arts Performer",
+            "Bio-Med Student"
         };
         
         public static string[] publicEducations =
         {
-            "BEng Chemical Engineering",
+            "BEng Chem Eng",
             "LLB Criminal Law",
             "BA Performing Arts",
-            "BSc Biomedical Technology Engineering"
+            "BSc Bio-Tech Eng"
+        };
+
+        public static string[] publicLoremIpsum =
+        {
+            "Nunc nec hendrerit massa. Maecenas ut arcu nisi. ",
+            "Aliquam eu leo ut risus lacinia consequat id eget ipsum. ",
+            "Curabitur rutrum nunc porta ipsum egestas eleifend. ",
+            "Nunc vulputate lacinia sapien, in imperdiet augue commodo non.\r\n\r\n",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            "Mauris gravida nec neque non efficitur. ",
+            "Quisque mollis eget nisi sed aliquam. \r\n\r\n",
+            "Quisque mollis eget nisi sed aliquam. \r\n\r\n",
+            "Maecenas efficitur tempus velit sed pharetra. ",
+            "Sed bibendum nisl eget magna ultrices luctus. ",
+            "Etiam sed ante eu enim elementum fermentum laoreet eget erat. ",
+            "Pellentesque sit amet commodo mi, ut pulvinar libero. " +
+            "Duis viverra consequat sapien, sed molestie lorem maximus id. ",
+            "Nulla et urna quam."
         };
 
         //attr:profile is optional, set to view a particular public profile
@@ -108,21 +126,7 @@ namespace DatingApp
                 job.Text = publicJobs[(int)profile];
                 education.Text = publicEducations[(int)profile];
 
-                bio.Text = "Nunc nec hendrerit massa. Maecenas ut arcu nisi. " +
-                    "Aliquam eu leo ut risus lacinia consequat id eget ipsum. " +
-                    "Curabitur rutrum nunc porta ipsum egestas eleifend. " +
-                    "Nunc vulputate lacinia sapien, in imperdiet augue commodo non.\r\n\r\n" +
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
-                    "Mauris gravida nec neque non efficitur. " +
-                    "Etiam bibendum lectus metus, nec pharetra lacus facilisis ut. " +
-                    "Nam urna massa, consequat sit amet augue quis, iaculis placerat risus. " +
-                    "Quisque mollis eget nisi sed aliquam. \r\n\r\n" +
-                    "Maecenas efficitur tempus velit sed pharetra. " +
-                    "Sed bibendum nisl eget magna ultrices luctus. " +
-                    "Etiam sed ante eu enim elementum fermentum laoreet eget erat. " +
-                    "Pellentesque sit amet commodo mi, ut pulvinar libero. " +
-                    "Duis viverra consequat sapien, sed molestie lorem maximus id. " +
-                    "Nulla et urna quam.";
+                bio.Text = Profile.publicLoremIpsum.Aggregate((string a, string b) => { return a + b; });
             }
             else
             {

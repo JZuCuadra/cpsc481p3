@@ -22,11 +22,17 @@ namespace DatingApp
     {
         public HomeCards()
         {
-            InitializeComponent();
-            this.buttonHomeCard.Click += ButtonHomeCard_Click;   
+            InitializeComponent();   
         }
 
-        private void ButtonHomeCard_Click(object sender, RoutedEventArgs e)
+        private void image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Window window = new Profile(ProfileType.publicProfile, PublicProfile.ASHLEY_DAVIDSON);
+            window.Show();
+            Window.GetWindow(this).Close();
+        }
+
+        private void content_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Window window = new Messaging();
             window.Show();

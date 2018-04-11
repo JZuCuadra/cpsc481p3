@@ -30,6 +30,7 @@ namespace DatingApp
             gender.Text = Profile.publicGenders[rand.Next(0, Profile.publicGenders.Length)];
             job.Text = Profile.publicJobs[rand.Next(0, Profile.publicJobs.Length)];
             education.Text = Profile.publicEducations[rand.Next(0, Profile.publicEducations.Length)];
+            bio.Text = Profile.publicLoremIpsum.Aggregate((string a, string b) => { return a + b; });
         }
 
         public void makeMatch()

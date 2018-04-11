@@ -17,10 +17,10 @@
         WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Storyboard x:Key="SlideLeft">
-            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Left)" From="100" To="-200" AccelerationRatio=".1"/>
+            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Left)" From="100" To="-240" AccelerationRatio=".1"/>
         </Storyboard>
         <Storyboard x:Key="SlideRight">
-            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Left)" From="-500" To="-200" AccelerationRatio=".1"/>
+            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Left)" From="-500" To="-240" AccelerationRatio=".1"/>
         </Storyboard>
         <Storyboard x:Key="SlideUp">
             <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Top)" From="250" To="-50" AccelerationRatio=".1"/>
@@ -32,16 +32,16 @@
     <Canvas>
         <local:MenuOverlay x:Name="menu" Width="492" Height="859" Panel.ZIndex="1"/>
         <local:CompassMap x:Name="map" Panel.ZIndex="2" Canvas.Left="282" Canvas.Top="10" />
-        <Grid x:Name="compassGrid" Height="900" Canvas.Left="-200" Width="900" Canvas.Top="-50">
+        <Grid x:Name="compassGrid" Height="900" Canvas.Left="-240" Width="900" Canvas.Top="-50">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300"/>
-                <ColumnDefinition Width="300"/>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="320"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="300"/>
-                <RowDefinition Height="300"/>
-                <RowDefinition Height="300"/>
+                <RowDefinition Height="320"/>
+                <RowDefinition Height="320"/>
+                <RowDefinition Height="320"/>
             </Grid.RowDefinitions>
         </Grid>
     </Canvas>

@@ -25,6 +25,7 @@ namespace DatingApp
         {
             InitializeComponent();
             this.ErrorTxt.Opacity = 0d;
+            
         }
         
         private void Login_Click(object sender, RoutedEventArgs e)

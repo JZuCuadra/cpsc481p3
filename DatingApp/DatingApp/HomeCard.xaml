@@ -1,34 +1,45 @@
-﻿<UserControl
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DatingApp"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="DatingApp.HomeCards"
-             mc:Ignorable="d" 
-             d:DesignHeight="56.459" d:DesignWidth="300">
-    <Grid Margin="0,0,0,0.959">
-        <materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <Canvas x:Name="contentCanvas"/>
-        <Grid x:Name="detailsGrid">
+﻿<UserControl x:Class="DatingApp.HomeCards"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:DatingApp"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+    mc:Ignorable="d" 
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TextElement.FontWeight="Regular"
+    TextElement.FontSize="13"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    Background="{DynamicResource MaterialDesignPaper}"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    d:DesignHeight="75" d:DesignWidth="300" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+    Padding="2">
+    <materialDesign:Card VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Cursor="Hand">
+        <Grid x:Name="OuterGrid" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*"/>
-                <ColumnDefinition Width="11*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="nameHeader" Style="{StaticResource MaterialDesignHeadlineTextBlock}" FontWeight="Bold" FontSize="18.667" Margin="5.5,2.5,85.5,27.5"><Run Text="Jane Doe"/></TextBlock>
-            <Image x:Name="image" Margin="2,2,4,4" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleY="-1"/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image x:Name="images_jpg" Margin="10,11,10,14" Source="images.jpg" Stretch="Fill"/>
-            <TextBlock x:Name="message" Margin="6.5,27.5,19.5,11" TextWrapping="Wrap" Grid.Column="1" FontSize="13.333"><Run Text="He"/><Run Text="y"/><Run Text="! "/><Run Text="movies"/><Run Text=" tonight"/><Run Text="?"/><Run Text=" "/><LineBreak/><Run/></TextBlock>
+            <Grid x:Name="InnerGrid" Grid.Column="1" Grid.Row="0" MouseLeftButtonDown="content_MouseLeftButtonDown">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="name" Grid.Row="0" Grid.Column="0" Style="{StaticResource MaterialDesignHeadlineTextBlock}" TextAlignment="Center">Jane Doe</TextBlock>
+                <TextBlock x:Name="message" Grid.Row="1" Grid.Column="0" TextAlignment="Center">Hey how have you been?</TextBlock>
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="0" MouseLeftButtonDown="image_MouseLeftButtonDown">
+                <Grid.Background>
+                    <ImageBrush x:Name="image" ImageSource="Images/glasses.jpg"/>
+                </Grid.Background>
+            </Grid>
         </Grid>
-        <Button x:Name="buttonHomeCard" Content="Button" Height="Auto" Margin="0.5,1,2,0.5" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
-    </Grid>
+    </materialDesign:Card>
 </UserControl>

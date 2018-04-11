@@ -46,7 +46,7 @@
                 <TextBlock x:Name="gender" Grid.Row="2" Grid.Column="1" Margin="0,0,10,0">gender...</TextBlock>
                 <TextBlock x:Name="job" Grid.Row="3" Grid.Column="1" Margin="0,0,10,0">job...</TextBlock>
                 <TextBlock x:Name="education" Grid.Row="4" Grid.Column="1" Margin="0,0,10,0">education...</TextBlock>
-                <TextBlock x:Name="bio" Grid.Row="5" Grid.Column="1" Margin="0,0,10,0">bio... lots and lots of bio</TextBlock>
+                <TextBlock x:Name="bio" Grid.Row="5" Grid.Column="1" Margin="0,0,10,0" TextWrapping="Wrap">bio... lots and lots of bio</TextBlock>
             </Grid>
         </Grid>
     </materialDesign:Card>
