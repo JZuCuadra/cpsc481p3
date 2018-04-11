@@ -36,7 +36,7 @@
                     <ColumnDefinition Width="7*"/>
                     <ColumnDefinition Width="13*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="nameHeader" Style="{StaticResource MaterialDesignHeadlineTextBlock}" HorizontalAlignment="Left" FontWeight="Bold" FontSize="24" VerticalAlignment="Center">Jane Doe</TextBlock>
+                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="nameHeader" Style="{StaticResource MaterialDesignHeadlineTextBlock}" HorizontalAlignment="Left" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" RenderTransformOrigin="0.501,0.531">Jane Doe</TextBlock>
                 <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">AGE</TextBlock>
                 <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">GENDER</TextBlock>
                 <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center">JOB</TextBlock>

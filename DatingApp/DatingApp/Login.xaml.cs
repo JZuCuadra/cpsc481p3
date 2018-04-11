@@ -24,12 +24,14 @@ namespace DatingApp
         public Login()
         {
             InitializeComponent();
+            this.ErrorTxt.Opacity = 0d;
         }
         
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrEmpty(UsernameTxtBox.Text) || String.IsNullOrEmpty(PasswordTxtBox.Password))
             {
+                this.ErrorTxt.Opacity = 1d;
                 return;
             }
             Home home = new Home();

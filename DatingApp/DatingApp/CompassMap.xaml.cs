@@ -36,8 +36,9 @@ namespace DatingApp
             }
             set
             {
-                value = Math.Min(Math.Pow(value - 100, 2) + Math.Pow(this.Top - 100, 2), 2500);
-                Canvas.SetLeft(this.StartingPoint, value);
+                value = (Math.Pow(value - 100, 2) + Math.Pow(this.Top - 100, 2)) < Math.Pow(100, 2) ? value : _left;
+                _left = value;
+                Canvas.SetLeft(this.StartingPoint, _left);
             }
         }
 
@@ -50,20 +51,17 @@ namespace DatingApp
             }
             set
             {
-                value = Math.Min(Math.Pow(this.Left - 100, 2) + Math.Pow(value - 100, 2), 2500);
-                Canvas.SetLeft(this.StartingPoint, value);
+                value = (Math.Pow(this.Left - 100, 2) + Math.Pow(value - 100, 2)) < Math.Pow(100, 2) ? value : _top;
+                _top = value;
+                Canvas.SetTop(this.StartingPoint, _top);
             }
         }
 
         public CompassMap()
         {
             InitializeComponent();
-            double x = 0;
-            double y = 0;
-            Canvas.SetTop(this.StartingPoint, y);
-            Canvas.SetLeft(this.StartingPoint, x);
-            this.Top = y;
-            this.Left = x;
+            _left = Canvas.GetLeft(this.StartingPoint);
+            _top = Canvas.GetTop(this.StartingPoint);
         }
 
         public void Move(DIRECTION direction)
@@ -71,10 +69,10 @@ namespace DatingApp
             switch(direction)
             {
                 case DIRECTION.DOWN:
-                    this.Top -= 1;
+                    this.Top += 1;
                     break;
                 case DIRECTION.UP:
-                    this.Top += 1;
+                    this.Top -= 1;
                     break;
                 case DIRECTION.LEFT:
                     this.Left -= 1;

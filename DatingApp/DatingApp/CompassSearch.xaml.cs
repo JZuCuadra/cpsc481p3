@@ -38,7 +38,7 @@ namespace DatingApp
 
         private UserControl CreateCard()
         {
-            UserControl card = new RomanticCard();
+            UserControl card = new Random().Next(0, 2) == 0 ? (UserControl) new RomanticCard() : new CasualCard();
             card.VerticalAlignment = VerticalAlignment.Stretch;
             card.HorizontalAlignment = HorizontalAlignment.Stretch;
             return card;
@@ -113,8 +113,7 @@ namespace DatingApp
                 {
                     item.SetValue(Grid.ColumnProperty, (int)item.GetValue(Grid.ColumnProperty) + offset);
                 }
-                RomanticCard card = (RomanticCard)CreateCard();
-                card.age.Text = DateTime.Now.ToLongTimeString();
+                UserControl card = CreateCard();
                 SetPosition(card, position, r);
             }
         }
@@ -136,8 +135,7 @@ namespace DatingApp
                 {
                     item.SetValue(Grid.RowProperty, (int)item.GetValue(Grid.RowProperty) + offset);
                 }
-                RomanticCard card = (RomanticCard)CreateCard();
-                card.age.Text = DateTime.Now.ToLongTimeString();
+                UserControl card = CreateCard();
                 SetPosition(card, c, position);
             }
         }
