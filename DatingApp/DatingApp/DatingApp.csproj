@@ -68,8 +68,8 @@
     <Compile Include="CompassSearch.xaml.cs">
       <DependentUpon>CompassSearch.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HomeCards.xaml.cs">
-      <DependentUpon>HomeCards.xaml</DependentUpon>
+    <Compile Include="HomeCard.xaml.cs">
+      <DependentUpon>HomeCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuOverlay.xaml.cs">
       <DependentUpon>MenuOverlay.xaml</DependentUpon>
@@ -108,7 +108,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HomeCards.xaml">
+    <Page Include="HomeCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -187,23 +187,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icons\compass-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons\heart-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons\profile.png" />
-    <Resource Include="icons\talk_bubble_heart-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons\setting.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons\notification-solid.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons\profile-with-background.jpg" />
+    <Resource Include="images.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,16 +22,14 @@ namespace DatingApp
         private List<Tuple<string, string>> questions { get; set; }
         private int index;
 
-        String [] questionList = new String[] {
+        String[] questionList = new String[] {
             " \nDo you like the taste of beer? ",
             " \nDo you like horror movies? ",
             " \nHave you ever traveled around another country alone? ",
             " \nWouldn't be fun to chuck it all and go live on a sailboat? ",
             " \nDo you prefer the people in your life to be simpler or complex? ",
             " \nShould death penalty be abolished? ",
-            " \nDo spelling and grammar mistakes annoy you? ",
-            " \nWhat is your sexual tendency? ",
-            " \nWhat is your relationship goal? "};
+            " \nDo spelling and grammar mistakes annoy you? " };
 
         public Survey()
         {
@@ -48,26 +46,10 @@ namespace DatingApp
 
         private void nextBtn_Click(object sender, RoutedEventArgs e)
         {
-            index++;
-            prevBtn.IsEnabled = true;
-            TextBlock block = (TextBlock)nextBtn.Content;
-            if (index >= questions.Count)
-            {
-                Home window = new Home();
-                window.Show();
-                Window.GetWindow(this).Close();
-                return;
-            }
-            else if (index == questions.Count - 1)
-            {
-                block.Text = "SUMBIT";
-            }
-            questionTitle.Text = questions[index].Item1;
-            questionText.Text = questions[index].Item2;
 
-           /* if (yesBtn.IsChecked == false && noBtn.IsChecked == false) 
+            if (yesBtn.IsChecked == false && noBtn.IsChecked == false) 
             {
-                System.Windows.Forms.MessageBox.Show("Please Select an answer");
+                System.Windows.Forms.MessageBox.Show("Please choose an answer to continue");
             }
             else
             {
@@ -89,7 +71,7 @@ namespace DatingApp
                 questionText.Text = questions[index].Item2;
                 yesBtn.IsChecked = false;
                 noBtn.IsChecked = false;
-            }*/
+            }
         }
 
         private void prevBtn_Click(object sender, RoutedEventArgs e)

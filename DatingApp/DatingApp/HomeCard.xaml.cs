@@ -10,25 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DatingApp
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for HomeCards.xaml
     /// </summary>
-    public partial class Home : Window
+    public partial class HomeCards : UserControl
     {
-        public Home()
+        public HomeCards()
         {
             InitializeComponent();
-            this.menu.initIndex(0);
-            for(int i = 0; i < 15; i++)
-            {
-                HomeCards card = new HomeCards();
-                card.Height = 75;
-                matchesGrid.Children.Add(card);
-            }
+            this.buttonHomeCard.Click += ButtonHomeCard_Click;   
+        }
+
+        private void ButtonHomeCard_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new Messaging();
+            window.Show();
+            Window.GetWindow(this).Close();
         }
     }
 }
+
