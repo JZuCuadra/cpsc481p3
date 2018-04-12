@@ -18,12 +18,12 @@
     <Canvas x:Name="loginBtn">
         <materialDesign:Card Padding="32" Canvas.Left="80" Canvas.Top="37" Height="160" Width="320"/>
         <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Canvas.Left="80" Canvas.Top="211">Credentials</TextBlock>
-        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="USERNAME" Canvas.Left="80" Canvas.Top="237" Width="320" Height="40" FontSize="18"/>
-        <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="PASSWORD" Canvas.Left="80" Canvas.Top="282" Width="320" Height="40" FontSize="18"/>
-        <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="CONFIRM PASSWORD" Canvas.Left="80" Canvas.Top="327" Width="320" Height="40" FontSize="18"/>
+        <TextBox x:Name="UserNameTxtBox" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="USERNAME" Canvas.Left="80" Canvas.Top="237" Width="320" Height="40" FontSize="18"/>
+        <PasswordBox x:Name="PasswordTxtBox" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="PASSWORD" Canvas.Left="80" Canvas.Top="282" Width="320" Height="40" FontSize="18"/>
+        <PasswordBox x:Name="RepeatPassTxtBox" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="CONFIRM PASSWORD" Canvas.Left="80" Canvas.Top="327" Width="320" Height="40" FontSize="18"/>
         <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Canvas.Left="80" Canvas.Top="381">Profile</TextBlock>
-        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="FIRST NAME" Canvas.Left="80" Canvas.Top="403" Width="320" Height="40" FontSize="18"/>
-        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="LAST NAME" Canvas.Left="80" Canvas.Top="448" Width="320" Height="40" FontSize="18"/>
+        <TextBox x:Name="FirstNameTxtBox" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="FIRST NAME" Canvas.Left="80" Canvas.Top="403" Width="320" Height="40" FontSize="18"/>
+        <TextBox x:Name="LastNameTxtBox" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="LAST NAME" Canvas.Left="80" Canvas.Top="448" Width="320" Height="40" FontSize="18"/>
         <ComboBox materialDesign:HintAssist.Hint="GENDER" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Canvas.Left="80" Canvas.Top="493" Width="320" Height="45" FontSize="18">
             <ComboBoxItem>MALE</ComboBoxItem>
             <ComboBoxItem>FEMALE</ComboBoxItem>
@@ -38,12 +38,18 @@
                     </StackPanel>
                 </DataTemplate>
             </GroupBox.HeaderTemplate>
-            <Button Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="291" Canvas.Top="550" Margin="0,119,0,1">
+            <GroupBox.Background>
+                <ImageBrush x:Name="image"/>
+            </GroupBox.Background>
+            <Button x:Name="AddPhotoBtn"  Style="{StaticResource MaterialDesignRaisedButton}"  Canvas.Left="291" Canvas.Top="550" Margin="0,119,0,1" Click="AddPhotoBtn_Click" Width="94">
                 <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ADD</TextBlock>
             </Button>
         </GroupBox>
         <Button x:Name="rebBtn" Style="{StaticResource MaterialDesignFlatButton}" Canvas.Left="179" Canvas.Top="800" Click="regBtn_Click">
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">REGISTER</TextBlock>
         </Button>
+        <TextBlock x:Name="ErrorTxt" Style="{DynamicResource MaterialDesignTitleTextBlock}" Canvas.Left="128" Canvas.Top="825" Foreground="#f44336" Opacity="1">
+            <materialDesign:PackIcon Kind="Cancel"/> All fields are required
+        </TextBlock>
     </Canvas>
 </Window>

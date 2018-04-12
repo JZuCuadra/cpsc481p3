@@ -31,7 +31,7 @@
             <ListBoxItem Height="89" Width="124" HorizontalContentAlignment="Stretch">
                 <StackPanel Orientation="Vertical">
                     <materialDesign:PackIcon Kind="Heart" Height="50" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
-                    <TextBlock HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">MACTHES</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">MATCHES</TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem Height="89" Width="126" HorizontalContentAlignment="Stretch">
