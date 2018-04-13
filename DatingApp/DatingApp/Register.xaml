@@ -16,7 +16,9 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         WindowStartupLocation="CenterScreen">
     <Canvas x:Name="loginBtn">
-        <materialDesign:Card Padding="32" Canvas.Left="80" Canvas.Top="37" Height="160" Width="320"/>
+        <materialDesign:Card Padding="32" Canvas.Left="80" Canvas.Top="37" Height="160" Width="320">
+            <Image Margin="72,-11,73,-14" Source="Screen Shot 2018-04-12 at 4.18.05 PM.png" Stretch="Fill"/>
+        </materialDesign:Card>
         <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Canvas.Left="80" Canvas.Top="211">Credentials</TextBlock>
         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="USERNAME" Canvas.Left="80" Canvas.Top="237" Width="320" Height="40" FontSize="18"/>
         <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="PASSWORD" Canvas.Left="80" Canvas.Top="282" Width="320" Height="40" FontSize="18"/>
