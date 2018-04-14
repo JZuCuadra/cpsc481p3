@@ -13,8 +13,7 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"
-        WindowStartupLocation="CenterScreen">
+        FontFamily="{DynamicResource MaterialDesignFont}">
     <Canvas>
         <local:MenuOverlay x:Name="menu" Height="859" Panel.ZIndex="1">
         </local:MenuOverlay>

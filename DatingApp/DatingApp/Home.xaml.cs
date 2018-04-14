@@ -23,10 +23,11 @@ namespace DatingApp
         {
             InitializeComponent();
             this.menu.initIndex(0);
-            for(int i = 0; i < 15; i++)
+            for(int i = 0; i < 5; i++)
             {
-                HomeCards card = new HomeCards();
-                card.Height = 75;
+                RomanticCard card = new RomanticCard();
+                card.Height = 300;
+                card.makeMatch();
                 matchesGrid.Children.Add(card);
             }
         }

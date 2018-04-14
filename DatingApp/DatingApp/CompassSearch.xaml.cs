@@ -12,11 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MaterialDesignThemes.Wpf;
-using System.Windows.Media.Animation;
 
 namespace DatingApp
 {
-
+    
     /// <summary>
     /// Interaction logic for CompassSearch.xaml
     /// </summary>
@@ -38,7 +37,7 @@ namespace DatingApp
 
         private UserControl CreateCard()
         {
-            UserControl card = new Random().Next(0, 2) == 0 ? (UserControl) new RomanticCard() : new CasualCard();
+            UserControl card = new RomanticCard();
             card.VerticalAlignment = VerticalAlignment.Stretch;
             card.HorizontalAlignment = HorizontalAlignment.Stretch;
             return card;
@@ -58,36 +57,19 @@ namespace DatingApp
 
         private void compassSearchWindow_KeyUp(object sender, KeyEventArgs e)
         {
-            Storyboard sb;
             switch (e.Key)
             {
                 case Key.Left:
-                    sb = this.FindResource("SlideLeft") as Storyboard;
-                    Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftHorizontal(true);
-                    sb.Begin();
-                    this.map.Move(DIRECTION.LEFT);
                     break;
                 case Key.Right:
-                    sb = this.FindResource("SlideRight") as Storyboard;
-                    Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftHorizontal(false);
-                    sb.Begin();
-                    this.map.Move(DIRECTION.RIGHT);
                     break;
                 case Key.Up:
-                    sb = this.FindResource("SlideUp") as Storyboard;
-                    Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftVertical(true);
-                    sb.Begin();
-                    this.map.Move(DIRECTION.UP);
                     break;
                 case Key.Down:
-                    sb = this.FindResource("SlideDown") as Storyboard;
-                    Storyboard.SetTarget(sb, this.compassGrid);
                     ShiftVertical(false);
-                    sb.Begin();
-                    this.map.Move(DIRECTION.DOWN);
                     break;
                 default:
                     break;
@@ -97,7 +79,6 @@ namespace DatingApp
 
         private void ShiftHorizontal(bool left = false)
         {
-
             int offset = left ? -1 : 1;
             int position = left ? compassGrid.ColumnDefinitions.Count - 1 : 0;
             for (int r = 0; r < compassGrid.RowDefinitions.Count; r++)
@@ -113,7 +94,8 @@ namespace DatingApp
                 {
                     item.SetValue(Grid.ColumnProperty, (int)item.GetValue(Grid.ColumnProperty) + offset);
                 }
-                UserControl card = CreateCard();
+                RomanticCard card = (RomanticCard)CreateCard();
+                card.age.Text = DateTime.Now.ToLongTimeString();
                 SetPosition(card, position, r);
             }
         }
@@ -135,7 +117,8 @@ namespace DatingApp
                 {
                     item.SetValue(Grid.RowProperty, (int)item.GetValue(Grid.RowProperty) + offset);
                 }
-                UserControl card = CreateCard();
+                RomanticCard card = (RomanticCard)CreateCard();
+                card.age.Text = DateTime.Now.ToLongTimeString();
                 SetPosition(card, c, position);
             }
         }

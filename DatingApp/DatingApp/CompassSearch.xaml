@@ -13,35 +13,20 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}" KeyUp="compassSearchWindow_KeyUp"
-        WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <Storyboard x:Key="SlideLeft">
-            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Left)" From="100" To="-240" AccelerationRatio=".1"/>
-        </Storyboard>
-        <Storyboard x:Key="SlideRight">
-            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Left)" From="-500" To="-240" AccelerationRatio=".1"/>
-        </Storyboard>
-        <Storyboard x:Key="SlideUp">
-            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Top)" From="250" To="-50" AccelerationRatio=".1"/>
-        </Storyboard>
-        <Storyboard x:Key="SlideDown">
-            <DoubleAnimation Duration="0:0:.3" Storyboard.TargetProperty="(Canvas.Top)" From="-350" To="-50" AccelerationRatio=".1"/>
-        </Storyboard>
-    </Window.Resources>
+        FontFamily="{DynamicResource MaterialDesignFont}" KeyUp="compassSearchWindow_KeyUp">
     <Canvas>
-        <local:MenuOverlay x:Name="menu" Width="492" Height="859" Panel.ZIndex="1"/>
-        <local:CompassMap x:Name="map" Panel.ZIndex="2" Canvas.Left="282" Canvas.Top="10" />
-        <Grid x:Name="compassGrid" Height="900" Canvas.Left="-240" Width="900" Canvas.Top="-50">
+        <local:MenuOverlay x:Name="menu" Width="492" Height="859" Panel.ZIndex="1">
+        </local:MenuOverlay>
+        <Grid x:Name="compassGrid" Height="1350" Canvas.Left="-300" Width="1075" Canvas.Top="-265">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="320"/>
-                <ColumnDefinition Width="320"/>
-                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="320"/>
-                <RowDefinition Height="320"/>
-                <RowDefinition Height="320"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
         </Grid>
     </Canvas>

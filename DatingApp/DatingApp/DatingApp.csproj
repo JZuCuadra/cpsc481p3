@@ -62,14 +62,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CompassMap.xaml.cs">
-      <DependentUpon>CompassMap.xaml</DependentUpon>
-    </Compile>
     <Compile Include="CompassSearch.xaml.cs">
       <DependentUpon>CompassSearch.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HomeCard.xaml.cs">
-      <DependentUpon>HomeCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuOverlay.xaml.cs">
       <DependentUpon>MenuOverlay.xaml</DependentUpon>
@@ -77,15 +71,11 @@
     <Compile Include="Messaging.xaml.cs">
       <DependentUpon>Messaging.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NotEmptyValidationRule.cs" />
     <Compile Include="Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CasualCard.xaml.cs">
-      <DependentUpon>CasualCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="RomanticCard.xaml.cs">
       <DependentUpon>RomanticCard.xaml</DependentUpon>
@@ -96,19 +86,11 @@
     <Compile Include="Survey.xaml.cs">
       <DependentUpon>Survey.xaml</DependentUpon>
     </Compile>
-    <Page Include="CompassMap.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="CompassSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Home.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HomeCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -141,10 +123,6 @@
     <Page Include="Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CasualCard.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="RomanticCard.xaml">
       <SubType>Designer</SubType>
@@ -187,10 +165,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\glasses.jpg" />
+    <Resource Include="icons\compass-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Screen Shot 2018-04-12 at 4.18.05 PM.png" />
+    <Resource Include="icons\heart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\profile.png" />
+    <Resource Include="icons\talk_bubble_heart-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\notification-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\profile-with-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

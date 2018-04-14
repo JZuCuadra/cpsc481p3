@@ -26,30 +26,30 @@
         </Grid.ColumnDefinitions>
         <Canvas x:Name="contentCanvas" Grid.Row="0" Grid.Column="0">
             <materialDesign:PackIcon Kind="ChevronLeft" Height="50" Width="50" />
+            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" ToolTip="NOTIFICATIONS" Height="100" Width="100" Canvas.Left="380" Canvas.Top="10">
+                <materialDesign:PackIcon Kind="Bell" Height="75" Width="75" />
+            </Button>
+            <Button x:Name="settingsBtn" Style="{StaticResource MaterialDesignFloatingActionButton}" ToolTip="SETTINGS" Height="100" Width="100" Canvas.Left="380" Canvas.Top="123" Click="settingsBtn_Click">
+                <materialDesign:PackIcon Kind="Settings" Height="75" Width="75" />
+            </Button>
         </Canvas>
         <ListBox x:Name="navBar" Grid.Row="1" Grid.Column="0" Style="{StaticResource MaterialDesignToolToggleListBox}" SelectedIndex="-1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <ListBoxItem Height="89" Width="124" HorizontalContentAlignment="Stretch">
+            <ListBoxItem Height="89" Width="166" HorizontalContentAlignment="Stretch">
                 <StackPanel Orientation="Vertical">
                     <materialDesign:PackIcon Kind="Heart" Height="50" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                     <TextBlock HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">MACTHES</TextBlock>
                 </StackPanel>
             </ListBoxItem>
-            <ListBoxItem Height="89" Width="126" HorizontalContentAlignment="Stretch">
+            <ListBoxItem Height="89" Width="168" HorizontalContentAlignment="Stretch">
                 <StackPanel Orientation="Vertical">
                     <materialDesign:PackIcon Kind="Compass" Height="50" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                     <TextBlock HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">SEARCH</TextBlock>
                 </StackPanel>
             </ListBoxItem>
-            <ListBoxItem Height="89" Width="123" HorizontalContentAlignment="Stretch" ToolTip="PROFILES" >
+            <ListBoxItem Height="89" Width="166" HorizontalContentAlignment="Stretch" ToolTip="PROFILES" >
                 <StackPanel Orientation="Vertical">
                     <materialDesign:PackIcon Kind="Face" Height="50" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                     <TextBlock HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">PROFILE</TextBlock>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem Height="89" Width="125" HorizontalContentAlignment="Stretch" ToolTip="PROFILES" >
-                <StackPanel Orientation="Vertical">
-                    <materialDesign:PackIcon Kind="Settings" Height="50" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
-                    <TextBlock HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">SETTINGS</TextBlock>
                 </StackPanel>
             </ListBoxItem>
         </ListBox>
