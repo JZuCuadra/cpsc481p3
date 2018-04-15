@@ -32,12 +32,12 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="name" Grid.Row="0" Grid.Column="0" Style="{StaticResource MaterialDesignHeadlineTextBlock}" TextAlignment="Center" Text="Ashley Davison" Margin="0.197,2.365,-0.197,-2.365"/>
+                <TextBlock x:Name="name" Grid.Row="0" Grid.Column="0" Style="{StaticResource MaterialDesignHeadlineTextBlock}" TextAlignment="Center">Ahsley Davison</TextBlock>
                 <TextBlock x:Name="message" Grid.Row="1" Grid.Column="0" TextAlignment="Center">Hey how have you been?</TextBlock>
             </Grid>
             <Grid Grid.Column="0" Grid.Row="0" MouseLeftButtonDown="image_MouseLeftButtonDown">
                 <Grid.Background>
-                    <ImageBrush x:Name="image2" ImageSource="C:\Users\Sonny\Documents\Ana\cpsc481p3\DatingApp\DatingApp\Images\drink.jpg"/>
+                    <ImageBrush x:Name="image" ImageSource="Images/drink.jpg"/>
                 </Grid.Background>
             </Grid>
         </Grid>

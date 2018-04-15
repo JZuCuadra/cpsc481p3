@@ -37,7 +37,7 @@
             </Grid>
             <Grid Grid.Column="0" Grid.Row="0" MouseLeftButtonDown="image_MouseLeftButtonDown">
                 <Grid.Background>
-                    <ImageBrush x:Name="image" ImageSource="C:\Users\Sonny\Documents\Ana\cpsc481p3\DatingApp\DatingApp\Images\blond.jpg"/>
+                    <ImageBrush x:Name="image" ImageSource="Images/blond.jpg"/>
                 </Grid.Background>
             </Grid>
         </Grid>
