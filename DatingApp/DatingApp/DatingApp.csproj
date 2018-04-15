@@ -208,17 +208,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\glasses.jpg" />
+    <Resource Include="Images\glasses.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Screen Shot 2018-04-12 at 4.18.05 PM.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\smile.jpg" />
-    <Content Include="Images\drink.jpg" />
+    <Resource Include="Images\smile.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Images\drink.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\blond.jpg" />
+    <Content Include="Images\blond.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
