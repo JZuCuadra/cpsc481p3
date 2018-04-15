@@ -16,8 +16,7 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         WindowStartupLocation="CenterScreen">
     <Canvas>
-        <local:MenuOverlay x:Name="menu" Height="859" Panel.ZIndex="1">
-        </local:MenuOverlay>
+        <local:MenuOverlay x:Name="menu" Height="859" Panel.ZIndex="1" Canvas.Left="-4" Canvas.Top="-2"/>
         <Grid Height="770" Width="482">
             <Grid.RowDefinitions>
                 <RowDefinition Height="4*"/>
@@ -50,8 +49,11 @@
             </ComboBox>
             <TextBlock Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">EMAIL ALERTS</TextBlock>
             <ToggleButton Grid.Row="4" Grid.Column="1" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
-            <Button Grid.Row="5" Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center">
+            <Button x:Name="retakeQuiz" Grid.Row="5" Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center">
                 <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">RETAKE QUIZ</TextBlock>
+            </Button>
+            <Button x:Name="getHelp" Grid.Row="5" Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="56.773,39,64.773,0" d:LayoutOverrides="Width">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="GET HELP"/>
             </Button>
         </Grid>
     </Canvas>

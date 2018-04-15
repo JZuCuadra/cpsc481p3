@@ -23,6 +23,16 @@ namespace DatingApp
         {
             InitializeComponent();
             this.menu.initIndex(3);
+
+            this.retakeQuiz.Click += RetakeQuiz_Click;
+        }
+
+        private void RetakeQuiz_Click(object sender, RoutedEventArgs e)
+        {
+            Survey window = new Survey();
+            window.Show();
+            Window.GetWindow(this).Close();
+            return;
         }
     }
 }

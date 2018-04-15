@@ -68,6 +68,15 @@
     <Compile Include="CompassSearch.xaml.cs">
       <DependentUpon>CompassSearch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HomeCard3.xaml.cs">
+      <DependentUpon>HomeCard3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeCard2.xaml.cs">
+      <DependentUpon>HomeCard2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeCard1.xaml.cs">
+      <DependentUpon>HomeCard1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HomeCard.xaml.cs">
       <DependentUpon>HomeCard.xaml</DependentUpon>
     </Compile>
@@ -107,6 +116,18 @@
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeCard3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HomeCard2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HomeCard1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="HomeCard.xaml">
       <SubType>Designer</SubType>
@@ -191,6 +212,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Screen Shot 2018-04-12 at 4.18.05 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\smile.jpg" />
+    <Content Include="Images\drink.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\blond.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
